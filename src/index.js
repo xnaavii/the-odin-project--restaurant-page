@@ -1,3 +1,4 @@
 import "./styles.css";
+import initialPageLoad from "./initialPageLoad.js";
 
-console.log("Hello World!");
+initialPageLoad();
