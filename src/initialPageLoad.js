@@ -13,6 +13,7 @@ export default function initialPageLoad() {
 
   const img = new Image();
   img.src = heroImg;
+  img.classList.add("hero-img");
   heroContainer.append(img);
 
   contentDiv.append(heroContainer);
