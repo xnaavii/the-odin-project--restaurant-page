@@ -3,24 +3,42 @@ import initialPageLoad from "./initialPageLoad.js";
 import menuPage from "./menuPage.js";
 import aboutPage from "./aboutPage.js";
 
-const navBtn = document.querySelectorAll(".nav-btn");
-
-navBtn.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    clearContent();
-    changeActivePage(e.target.dataset.page);
-  });
-});
-
-function changeActivePage(pageName) {
+(() => {
   const pages = { home: initialPageLoad, menu: menuPage, about: aboutPage };
-  if (!pageName || !pages[pageName]) return;
-  pages[pageName]();
-}
+  const navBtn = document.querySelectorAll(".nav-btn");
+  let activePage = "home";
 
-function clearContent() {
-  const content = document.querySelector("#content");
-  content.innerHTML = "";
-}
+  navBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      clearContent();
+      changeActivePage(e.target.dataset.page);
+      updateActiveTab();
+    });
+  });
 
-initialPageLoad();
+  function changeActivePage(pageName) {
+    if (!pageName || !pages[pageName]) {
+      return;
+    }
+    activePage = pageName;
+    pages[pageName]();
+  }
+
+  function clearContent() {
+    const content = document.querySelector("#content");
+    content.innerHTML = "";
+  }
+
+  function updateActiveTab() {
+    navBtn.forEach((btn) => {
+      if (btn.dataset.page === activePage) {
+        btn.dataset.active = true;
+      } else {
+        btn.dataset.active = false;
+      }
+    });
+  }
+
+  initialPageLoad();
+  updateActiveTab();
+})();

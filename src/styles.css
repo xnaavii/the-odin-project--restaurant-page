@@ -110,18 +110,14 @@ body {
   position: relative;
 }
 
-.nav-btn--active {
-  position: relative;
-}
-
-.nav-btn--active::after {
+.nav-btn[data-active="true"]::after {
   content: "";
   position: absolute;
   bottom: -100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #FFEED6;
   z-index: 1;
 }
 
