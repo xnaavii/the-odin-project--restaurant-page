@@ -125,6 +125,9 @@ body {
 
 .hero-title {
   position: absolute;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
   top: 10%;
   left: 10%;
   color: #ffff;

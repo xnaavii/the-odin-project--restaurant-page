@@ -8,7 +8,7 @@ export default function initialPageLoad() {
 
   const title = document.createElement("h1");
   title.classList.add("hero-title");
-  title.textContent = "Welcome to the best restaurant in Dublin";
+  title.textContent = "Taste the best Dublin pizza";
   heroContainer.append(title);
 
   const img = new Image();
