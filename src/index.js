@@ -1,8 +1,9 @@
 import "./styles.css";
 import initialPageLoad from "./initialPageLoad.js";
 import menuPage from "./menuPage.js";
+import aboutPage from "./aboutPage.js";
 
-const pages = { home: initialPageLoad, menu: menuPage };
+const pages = { home: initialPageLoad, menu: menuPage, about: aboutPage };
 const navBtn = document.querySelectorAll(".nav-btn");
 
 navBtn.forEach((btn) => {
