@@ -1,9 +1,9 @@
 export default function menuPage() {
   const contentDiv = document.querySelector("#content");
 
-  const h1 = document.createElement("h1");
-  h1.textContent = "Explore the best menu";
-  contentDiv.append(h1);
+  const title = document.createElement("h1");
+  title.textContent = "Explore the best menu";
+  contentDiv.append(title);
   contentDiv.append(menuList("Starters", [{ title: "Pizza" }]));
 }
 
