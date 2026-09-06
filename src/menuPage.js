@@ -12,6 +12,7 @@ export default function menuPage() {
 
 function menuList(menu) {
   const list = document.createElement("ul");
+  list.classList.add("menu-list");
 
   menu.forEach((item) => {
     list.append(menuItem(item));
@@ -22,7 +23,22 @@ function menuList(menu) {
 
 function menuItem(menuItem) {
   const item = document.createElement("li");
-  item.textContent = menuItem.name;
+  item.classList.add("menu-item");
+
+  const headerContent = document.createElement("div");
+
+  const name = document.createElement("p");
+  name.textContent = menuItem.name;
+
+  const price = document.createElement("p");
+  price.textContent = new Intl.NumberFormat("en-IE", {
+    style: "currency",
+    currency: "EUR",
+  }).format(menuItem.price);
+
+  headerContent.append(name);
+  headerContent.append(price);
+  item.append(headerContent);
 
   const img = new Image();
   img.src = menuItem.image;

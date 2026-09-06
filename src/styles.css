@@ -136,12 +136,12 @@ body {
 }
 
 #content {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
   background: var(--gray-100);
-  height: 100svh;
+  min-height: 100svh;
+  padding: 24px;
 }
 
 .hero-container {
@@ -179,4 +179,33 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  height: 400px;
+  background: var(--beige);
+}
+
+.menu-item p {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+.menu-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

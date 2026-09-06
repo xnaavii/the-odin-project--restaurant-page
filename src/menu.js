@@ -7,13 +7,14 @@ const MENU = [
     name: "Margharita",
     description: "Cheesus!",
     image: margharitaImage,
-    price: "16",
+    price: 16,
   },
   {
     id: "pepperoni",
     name: "Pepperoni",
     image: pepperoniImage,
     description: "A certified hood classic.",
+    price: 18,
   },
 ];
 
