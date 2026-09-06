@@ -1,12 +1,12 @@
-import margharitaImage from "./assets/margharita.jpg";
+import margheritaImage from "./assets/margherita.jpg";
 import pepperoniImage from "./assets/pepperoni.jpg";
 
 const MENU = [
   {
-    id: "margharita",
-    name: "Margharita",
+    id: "margherita",
+    name: "Margherita",
     description: "Cheesus!",
-    image: margharitaImage,
+    image: margheritaImage,
     price: 16,
   },
   {
