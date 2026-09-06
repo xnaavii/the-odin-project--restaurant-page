@@ -1,4 +1,4 @@
-import heroImg from "./assets/hero-image.jpg";
+import heroImg from "./assets/margharita.jpg";
 
 export default function initialPageLoad() {
   const contentDiv = document.querySelector("#content");

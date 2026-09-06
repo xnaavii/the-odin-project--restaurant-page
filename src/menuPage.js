@@ -1,27 +1,32 @@
-export default function menuPage() {
-  const contentDiv = document.querySelector("#content");
+import MENU from "./menu.js";
 
-  const title = document.createElement("h1");
-  title.textContent = "Explore the best menu";
-  contentDiv.append(title);
-  contentDiv.append(menuList("Starters", [{ title: "Pizza" }]));
+export default function menuPage() {
+  const div = document.querySelector("#content");
+
+  const h1 = document.createElement("h1");
+  h1.textContent = "Explore the best menu";
+
+  div.append(h1);
+  div.append(menuList(MENU));
 }
 
-function menuList(title, menuItems) {
-  const menuListContainer = document.createElement("div");
+function menuList(menu) {
+  const list = document.createElement("ul");
 
-  const menuListTitle = document.createElement("h4");
-  menuListTitle.textContent = title;
-
-  const menuList = document.createElement("ul");
-  menuItems.forEach((menuItem) => {
-    const item = document.createElement("li");
-    menuItem.textContent = item.title;
-    menuList.append(item);
+  menu.forEach((item) => {
+    list.append(menuItem(item));
   });
 
-  menuListContainer.append(menuListTitle);
-  menuListContainer.append(menuList);
+  return list;
+}
 
-  return menuListContainer;
+function menuItem(menuItem) {
+  const item = document.createElement("li");
+  item.textContent = menuItem.name;
+
+  const img = new Image();
+  img.src = menuItem.image;
+  item.append(img);
+
+  return item;
 }
