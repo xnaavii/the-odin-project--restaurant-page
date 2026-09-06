@@ -1,5 +1,6 @@
 import margheritaImage from "./assets/margherita.jpg";
 import pepperoniImage from "./assets/pepperoni.jpg";
+import pineappleImage from "./assets/pineapple.jpg";
 
 const MENU = [
   {
@@ -15,6 +16,13 @@ const MENU = [
     image: pepperoniImage,
     description: "A certified hood classic.",
     price: 18,
+  },
+  {
+    id: "pineapple",
+    name: "Pineapple",
+    image: pineappleImage,
+    description: "The controversial one...",
+    price: 16,
   },
 ];
 
